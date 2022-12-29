@@ -1,0 +1,12 @@
+<div *ngIf="isAuthenthicated">
+  <h3>Sets</h3>
+  <app-set-list-preview></app-set-list-preview>
+  <hr>
+  <h3>Classes</h3>
+  <app-classes-preview></app-classes-preview>
+</div>
+<div *ngIf="!isAuthenthicated">
+  <h2>Visitors can only access the sets.</h2>
+  <h3>Sets</h3>
+  <app-set-list-preview></app-set-list-preview>
+</div>

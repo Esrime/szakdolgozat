@@ -1,0 +1,9 @@
+.card{
+  padding: 1em;
+  width: 300px;
+}
+
+p{
+  font-size: large;
+  font-weight: 500;
+}

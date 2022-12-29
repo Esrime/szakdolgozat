@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>{{set.title}}</h1>
+  <div class="card-view">
+    <button class="btn btn-primary" (click)="previousCard()">&larr; Back</button>
+    <app-cardset [card]="set.cards[ind]"></app-cardset>
+    <button class="btn btn-primary" (click)="nextCard()">&rarr; Next</button>
+  </div>
+  <div *ngIf="isAuthenthicated">
+    <div *ngIf="set.itemNum>4">
+      <button type="button" (click)="practice(false)" class="margin btn btn-primary" id="tb">Practice</button>
+      <button type="button" (click)="practice(true)" class="margin btn btn-primary">Timed practice</button>
+    </div>
+    <div *ngIf="set.itemNum<=4">
+      <p id="tp">You need to have at least 5 cards in a set to start practice.</p>
+    </div>
+  </div>
+  <div>
+    <ul class="list-group" *ngFor="let c of set.cards">
+      <li class="list-group-item">
+        <p>{{c.front}}</p>
+        <p>{{c.back}}</p>
+      </li>
+    </ul>
+  </div>
+</div>
